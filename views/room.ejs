@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meeting</title>
+  <link rel="stylesheet" href="style.css" type="text/css" />
+  <link rel="stylesheet" href="base.css" type="text/css" />
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script src="https://unpkg.com/peerjs@1.4.7/dist/peerjs.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+
+  <script>
+    const roomid = "<%= roomId %>";
+  </script>
+
+
+
+<style>
+  #screen{
+            width:70%;
+            height:500px;
+            border: 10px solid;
+            margin: 10px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .screen{
+            width: 500px;
+            height: 400px;
+            border: 2px solid red;
+        }
+</style>
+
+
+</head>
+
+<body>
+  <div class="home-page">
+
+    <!-- <div id="screen"></div> -->
+
+
+    <%- include("appbar")-%>
+      <div class="peerId-container">
+        <div class="peerId">
+          RoomID : <%=roomId%>
+            <span class="material-symbols-rounded icon-btn" onclick="copyText()">
+              content_copy
+            </span>
+        </div>
+        <div class="controls">
+          <span id="mute" class="material-symbols-rounded" onclick="muteMic()">mic</span>
+          <span id="pause" class="material-symbols-rounded" onclick="pauseVideo()">videocam</span>
+
+          <span id="endup" class="material-symbols-rounded" onclick="handleEndup()">call_end</span>
+        </div>
+      </div>
+      <div class="videoGrid" id="videoGrid"></div>
+
+
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+@font-face {
+  font-family: sharpSansBold;
+  src: url("SharpSansBold.otf");
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.app-bar-container {
+  height: 50px;
+  background-color: #54436b;
+  padding: 5px;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: -moz-none;
+  -o-user-select: none;
+  user-select: none;
+}
+.app-bar-container span {
+  font-size: 36px;
+  color: #acffad;
+  margin-left: 10px;  
+}
+.app-bar-container div {
+  text-decoration: none;
+  width: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.app-title {
+  font-family: sharpSansBold;
+  color: #acffad;
+  display: inline-block;
+}
+.home-page {
+  height: 100vh;
+  overflow: hidden;
+}
+.peerId-container {
+  height: 50px;
+  background-color: #71efa3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+@media screen and (max-width: 900px) {
+  .peerId-container {
+    flex-direction: column;
+    height: 100px;
+  }
+}
+.peerId {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  font-family: Roboto;
+  font-weight: 800;
+  color: #54436b;
+}
+.videoGrid {
+  height: calc(100vh - 250px);
+  padding: 20px 10px 40px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  overflow-y: auto;
+}
+
+video {
+  border-radius: 20px;
+  min-width: 300px;
+  max-width: 500px;
+  height: 320px;
+  margin: 20px;
+  object-fit: cover;
+  border: 3px solid #50cb93;
+}
+@media screen and (max-width: 900px) {
+  video {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    border: 3px solid #50cb93;
+  }
+}
+.controls {
+  padding: 10px;
+  text-align: center;
+}
+.controls span {
+  font-size: 30px;
+  background-color: #acffad;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 0 5px;
+  color: #54436b;
+  user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: -moz-none;
+  -o-user-select: none;
+  cursor: pointer;
+}
+.icon-btn {
+  font-size: 36px;
+  background-color: #acffad;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 0 5px;
+  color: #54436b;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: -moz-none;
+  -o-user-select: none;
+}
+
+.icon-btn:active {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 100, "opsz" 40;
+}
+
+#endup {
+  background-color: #b3261e;
+  color: #ffffff;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}

@@ -1,0 +1,25 @@
+<%- include("./partials/Header")-%>
+<div class="home-page">
+  <%- include("appbar")-%>
+  <div class="form">
+    <form method="post" action="/join">
+      <input
+        type="text"
+        class="TextField large"
+        placeholder="Enter Room Id"
+        name="roomid"
+        autocomplete="off"
+      />
+      <button class="large cursor primary-outlined" type="submit">JOIN</button>
+    </form>
+    <div class="or">or</div>
+    <a href="/host" class="notAnchor">
+      <button class="BigButton large cursor primary-contained">HOST</button>
+    </a>
+  </div>
+  <footer>
+    <span class="material-symbols-rounded"> copyright </span>
+    <p>Pavan's HicCup</p>
+  </footer>
+</div>
+<%- include("./partials/Footer")-%>
