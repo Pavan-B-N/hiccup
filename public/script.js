@@ -5,16 +5,16 @@ let localStream;
 
 const remoteStreamArray = [];
 const callObjects = [];
-// const peer = new Peer(undefined, {
-//     host: 'localhost',
-//     port: "3030",
-//     path: "/peerjs"
-// })
 const peer = new Peer(undefined, {
-  host: "hiccup.adaptable.app",
-  port: "",
-  path: "/peerjs",
-});
+    host: 'localhost',
+    port: "3030",
+    path: "/peerjs"
+})
+// const peer = new Peer(undefined, {
+//   host: "hiccup.adaptable.app",
+//   port: "",
+//   path: "/peerjs",
+// });
 socket.on("id", (id) => {
   socketId = id;
   console.log(id)
